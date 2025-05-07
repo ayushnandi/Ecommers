@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+.body{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.container{
+  width: 90%;
+  margin: auto;
+}
+
+header.top-strip{
+  
+}
+
+.link:hover{
+  color: #ff5252;
+
+}
+
+.logo-font{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+}
