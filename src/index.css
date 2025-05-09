@@ -16,6 +16,7 @@ header.top-strip{
 
 .link:hover{
   color: #ff5252;
+  transition: all 0.2s ease;
 
 }
 
