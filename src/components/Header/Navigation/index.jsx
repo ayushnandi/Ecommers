@@ -1,16 +1,24 @@
 import { Button } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import { FaAngleDown } from "react-icons/fa";
-import React from 'react'
+import React, { useState } from 'react'
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import { Link } from 'react-router-dom';
+import CategoryPanel from './CategoryPanel';
 
 export default function Navigation() {
+
+  const [isOpenCatPanel, setIsOpenCatPanel ] = useState(false); 
+  const openCategoryPanel=(value) => {
+    setIsOpenCatPanel(value);
+  }
+
   return (
+    <>
     <nav>
       <div className="container flex items-center justify-end py-1 gap-6  ">
         <div className="col1 w-[20%]">
-            <Button className="!text-black gap-[4px] w-full ">
+            <Button onClick={() => openCategoryPanel(true)}  className="!text-black gap-[4px] w-full ">
               <MenuIcon/> Shop By Categories <FaAngleDown className='ml-auto '/>
             </Button>
         </div>
@@ -52,5 +60,10 @@ export default function Navigation() {
         </div>
       </div>
     </nav>
+    <CategoryPanel 
+        openCategoryPanel={openCategoryPanel} 
+        isOpenCatPanel={isOpenCatPanel} 
+      />
+    </>
   )
 }
